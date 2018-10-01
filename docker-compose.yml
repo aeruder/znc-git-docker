@@ -6,9 +6,9 @@ services:
       - "1025:1025"
     volumes:
       - "./znc-master:/home/znc/.znc"
-  znc-slave:
+  znc-laptop:
     image: znc-git:latest
     ports:
-      - "9344:1025"
+      - "9345:1025"
     volumes:
       - "./znc-slave:/home/znc/.znc"
