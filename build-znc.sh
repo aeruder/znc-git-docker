@@ -8,3 +8,5 @@ cd znc
 ./configure --enable-perl --enable-tcl --enable-python
 make
 make install
+cd ..
+rm -fr znc
