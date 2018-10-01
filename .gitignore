@@ -1,2 +1,5 @@
 /znc-master
-/znc-slave
+/znc-work
+/znc-laptop
+/znc-phone
+/.env

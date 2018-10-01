@@ -1,4 +1,4 @@
-version: '3.2'
+version: '2'
 services:
   znc-master:
     image: znc-git:latest
@@ -6,9 +6,13 @@ services:
       - "1025:1025"
     volumes:
       - "./znc-master:/home/znc/.znc"
-  znc-laptop:
+    environment:
+      - "LOCAL_USER_ID=${LOCAL_USER_ID}"
+  znc-work:
     image: znc-git:latest
     ports:
       - "9345:1025"
     volumes:
-      - "./znc-slave:/home/znc/.znc"
+      - "./znc-work:/home/znc/.znc"
+    environment:
+      - "LOCAL_USER_ID=${LOCAL_USER_ID}"
